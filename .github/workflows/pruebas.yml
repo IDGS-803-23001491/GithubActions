@@ -21,7 +21,15 @@ jobs:
           python-version: "3.12"
 
       - name: Instalar dependencias
-        run: pip install -r requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-      - name: Ejecutar pruebas
-        run: python -m pytest -v
+      - name: Pruebas unitarias
+        run: python -m pytest -v tests/test_calculos.py
+
+      - name: Pruebas de integración
+        run: python -m pytest -v tests/test_integracion.py
+
+      - name: Pruebas de sistema
+        run: python -m pytest -v tests/test_system.py
