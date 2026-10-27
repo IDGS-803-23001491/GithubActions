@@ -26,10 +26,10 @@ jobs:
           pip install -r requirements.txt
 
       - name: Pruebas unitarias
-        run: python -m pytest -v tests/test_calculos.py
+        run: python -m pytest -v test/test_calculos.py
 
       - name: Pruebas de integración
-        run: python -m pytest -v tests/test_integracion.py
+        run: python -m pytest -v test/test_integracion.py
 
       - name: Pruebas de sistema
-        run: python -m pytest -v tests/test_system.py
+        run: python -m pytest -v test/test_system.py
