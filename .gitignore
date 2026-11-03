@@ -1,0 +1,11 @@
+.venv/
+.venv-build/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+git add .
+git commit -m "Automatizar build del paquete Python"
+git push

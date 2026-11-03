@@ -1,6 +1,6 @@
 
 import argparse
-from tienda import calcular_precio, calcular_iva
+from src.devops_tienda.tienda import calcular_precio, calcular_iva
 
 
 def ejecutar_calculo(tipo, precio, porcentaje=None):
